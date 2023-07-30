@@ -43,3 +43,12 @@ const score = 68;
 const grade = calculateGrade(score);
 
 console.log(`Score:${score},Grade:${grade}`);
+
+
+
+
+
+
+
+
+
