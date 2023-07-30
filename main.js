@@ -19,6 +19,6 @@ function table(number){
         console.log(`${number}x ${i} = ${result}`);
     }
 }
-table(14);
+table(5);
 
 
