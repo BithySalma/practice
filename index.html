@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">Total Purchase Amount:</label>
+    <input type="number" id="totalPurchaseAmount" name="totalPurchaseAmount" />
+    <hr />
+    <label for="">Discount Percent:</label>
+    <p id="discount_percent"></p>
+    <hr />
+    <label for="">Discount Amount:</label>
+    <p id="discount_amount"></p>
+    <hr />
+    <label for="">Amount After Discount:</label>
+    <p id="amount_after_discount"></p>
+    <hr />
+    <button onclick="discountCalculator()">Discount Calculator</button>
+    <script>
+      let purchaseAmount = document.getElementById("totalPurchaseAmount");
+      let discountedAmount = 0;
+      let discountAmount = 0;
+      let discountPercent = 0;
+      const discountCalculator = () => {
+        purchaseAmountVal = purchaseAmount.value;
+        if (purchaseAmountVal < 50) {
+          discountPercent = 0;
+          discountAmount = 0;
+        } else if (purchaseAmountVal >= 50 && purchaseAmountVal <= 100) {
+          discountPercent = 5;
+          discountAmount = (purchaseAmountVal * discountPercent) / 100;
+        } else if (purchaseAmountVal >= 100 && purchaseAmountVal <= 200) {
+          discountPercent = 10;
+          discountAmount = (purchaseAmountVal * discountPercent) / 100;
+        } else if (purchaseAmountVal >= 200) {
+          discountPercent = 15;
+          discountAmount = (purchaseAmountVal * discountPercent) / 100;
+        }
+
+        document.getElementById("discount_percent").innerText =
+          discountPercent + "%";
+        document.getElementById("discount_amount").innerText =
+          "$" + discountAmount;
+        document.querySelector("#amount_after_discount").innerText =
+          "$" + (purchaseAmountVal - discountAmount);
+      };
+    </script>
+  </body>
+</html>

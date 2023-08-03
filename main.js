@@ -50,5 +50,31 @@ console.log(`Score:${score},Grade:${grade}`);
 
 
 
+//Assignment1
+
+function calculateDiscount() {
+  // Initialize a variable to store the total purchase amount
+  const totalPurchaseAmount = 200;
 
 
+  // Initialize a variable to store the discounted amount
+  let discountedAmount = totalPurchaseAmount;
+
+
+  // Apply discounts based on the total purchase amount
+  if (totalPurchaseAmount >= 50 && totalPurchaseAmount <= 100) {
+    discountedAmount = (discountedAmount * 5) / 100;
+  } else if (totalPurchaseAmount > 100 && totalPurchaseAmount <= 200) {
+    discountedAmount = (discountedAmount * 10) / 100;
+  } else if (totalPurchaseAmount > 200) {
+    discountedAmount = (discountedAmount * 15) / 100;
+  }
+
+
+  // Display the result on the webpage
+  console.log(discountedAmount);
+  console.log(discountedAmount + totalPurchaseAmount);
+}
+
+
+calculateDiscount();
