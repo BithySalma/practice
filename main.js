@@ -54,7 +54,7 @@ console.log(`Score:${score},Grade:${grade}`);
 
 function calculateDiscount() {
   // Initialize a variable to store the total purchase amount
-  const totalPurchaseAmount = 200;
+  const totalPurchaseAmount = 300;
 
 
   // Initialize a variable to store the discounted amount
